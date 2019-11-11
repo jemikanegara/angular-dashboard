@@ -1,0 +1,45 @@
+<div class="auth">
+  <div class="login">
+    <h2>Login</h2>
+    <form>
+
+      <!-- Username -->
+      <label for="username" class="block">
+        <span>Username</span>
+        <div class="input-wrap">
+          <fa-icon [icon]="faUser" size="lg"></fa-icon>
+          <input type="text" id="username" placeholder="Type your username">
+        </div>
+      </label>
+
+      <!-- Password -->
+      <label for="password" class="block">
+        <span>Password</span>
+        <div class="input-wrap">
+          <fa-icon [icon]="faLock" size="lg"></fa-icon>
+          <input type="password" id="password" placeholder="Type your password">
+        </div>
+      </label>
+
+      <!-- Forgot -->
+      <div class="forgot">Forgot Password?</div>
+      <button>LOGIN</button>
+    </form>
+
+    <!-- Signup -->
+    <div class="signup-cta">
+      Or Sign Up With
+    </div>
+    <div class="flex">
+      <span class="flex signup-social facebook">
+        <fa-icon [icon]="faFacebookF" size="lg"></fa-icon>
+      </span>
+      <span class="flex signup-social twitter">
+        <fa-icon [icon]="faTwitter" size="lg"></fa-icon>
+      </span>
+      <span class="flex signup-social google">
+        <fa-icon [icon]="faGoogle" size="lg"></fa-icon>
+      </span>
+    </div>
+  </div>
+</div>
