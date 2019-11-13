@@ -98,3 +98,9 @@ button {
 .signup-social:hover {
   background-color: #333333;
 }
+
+.error {
+  color: #e74c3c;
+  font-size: 16px;
+  padding-bottom: 10px;
+}

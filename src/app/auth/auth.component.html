@@ -1,14 +1,15 @@
 <div class="auth">
   <div class="login">
     <h2>Login</h2>
-    <form>
+    <form [formGroup]="auth" (ngSubmit)="onSubmit()">
 
       <!-- Username -->
       <label for="username" class="block">
         <span>Username</span>
         <div class="input-wrap">
           <fa-icon [icon]="faUser" size="lg"></fa-icon>
-          <input type="text" id="username" placeholder="Type your username">
+          <input [(ngModel)]="auth.username" type="text" id="username" formControlName="username"
+            placeholder="Type your username">
         </div>
       </label>
 
@@ -17,12 +18,14 @@
         <span>Password</span>
         <div class="input-wrap">
           <fa-icon [icon]="faLock" size="lg"></fa-icon>
-          <input type="password" id="password" placeholder="Type your password">
+          <input [(ngModel)]="auth.password" type="password" id="password" formControlName="password"
+            placeholder="Type your password">
         </div>
       </label>
 
       <!-- Forgot -->
       <div class="forgot">Forgot Password?</div>
+      <app-modal (closeModal)="onCloseModal()" *ngIf="error !== ''" [message]="error">{{error}}</app-modal>
       <button>LOGIN</button>
     </form>
 
