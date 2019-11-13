@@ -17,8 +17,6 @@ export class ModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.message)
-    console.log("modal")
   }
 
 }
