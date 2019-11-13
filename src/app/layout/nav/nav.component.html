@@ -1,1 +1,7 @@
-<p>nav works!</p>
+<div class="container">
+  <ul *ngFor="let list of navLists">
+    <a [routerLink]="list.path">
+      <li>{{list.label}}</li>
+    </a>
+  </ul>
+</div>
