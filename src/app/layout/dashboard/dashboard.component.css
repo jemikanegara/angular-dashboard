@@ -1,0 +1,15 @@
+.shared {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+}
+
+.map {
+  width: 70%;
+}
+
+.detail {
+  width: 30%;
+}

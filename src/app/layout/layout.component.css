@@ -1,3 +1,9 @@
 main {
   display: flex;
 }
+
+main .component {
+  flex: 1;
+  background: #eee;
+  padding: 20px;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
+import { Summary } from './summary';
 
 @Component({
   selector: 'app-summary',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary.component.css']
 })
 export class SummaryComponent implements OnInit {
+  summary: Array<Summary> = []
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
+    this.sharedService.getSummary().subscribe(res => {
+      this.summary = res
+    })
   }
 
 }
