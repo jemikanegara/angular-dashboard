@@ -8,15 +8,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component';
 import { SharedModule } from './shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from '../reducers';
+
+import { loadingReducer } from '../ngrx/loading.reducer';
 
 
 @NgModule({
   declarations: [EmailComponent, DashboardComponent, HeaderComponent, NavComponent],
-  exports: [HeaderComponent, NavComponent],
+  exports: [HeaderComponent, NavComponent, StoreModule],
   imports: [
     CommonModule,
     LayoutRoutingModule,
     DashboardModule,
-    SharedModule]
+    SharedModule,
+    StoreModule.forRoot({ loading: loadingReducer })
+  ]
 })
 export class LayoutModule { }
